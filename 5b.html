@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Stock Price Simulation</title>
+    <script>
+        function simulateStockPriceChange() {
+            setInterval(() => {
+                const stockPriceChange = Math.floor(Math.random() * 100);
+                console.log(`Stock price changed by ${stockPriceChange} points.`);
+            }, 3000);
+        }
+    </script>
+</head>
+
+<body onload="simulateStockPriceChange()">
+    <h1>Stock Price Simulation</h1>
+    <p>Open the browser console to see the stock price change.</p>
+</body>
+
+</html>
