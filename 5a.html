@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARRAYS</title>
+</head>
+
+<body>
+    <div id="movie-template"></div>
+
+    <script>
+        let htmlCode = '';
+        let movies = [
+            {
+                movieName: "Movie 1",
+                language: "English",
+                category: "Action",
+                rating: "4"
+            },
+            {
+                movieName: "Movie 2",
+                language: "Telugu",
+                category: "Drama",
+                rating: "3"
+            },
+            {
+                movieName: "Movie 3",
+                language: "hindi",
+                category: "Action",
+                rating: "4"
+            }, {
+                movieName: "Movie 4",
+                language: "tamil",
+                category: "Action",
+                rating: "5"
+            }
+        ];
+
+        function movieDetails(movie) {
+            let html = `
+                <div>
+                    <h2>Movie Name: ${movie.movieName}</h2>
+                    <p><b>Language:</b> ${movie.language}</p>
+                    <p><b>Category:</b> ${movie.category}</p>
+                    <p><b>Rating:</b> ${movie.rating}</p>
+                </div>
+                <hr>
+            `;
+            return html;
+        }
+
+        let movieHTML = "";
+        for (let x of movies) {
+            movieHTML += movieDetails(x);
+        }
+
+        document.getElementById("movie-template").innerHTML = movieHTML;
+    </script>
+</body>
+
+</html>
